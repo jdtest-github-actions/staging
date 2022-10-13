@@ -1,0 +1,12 @@
+on: push
+jobs:
+  git-sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git-sync
+        uses: wei/git-sync@v3
+        with:
+          source_repo: "https://johnduenas1000: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@github.com/jdtest-github-actions/develop.git" #URL primer repositorio.
+          source_branch: "main"
+          destination_repo: https://johnduenas1000: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@github.com/jdtest-github-actions/staging.git #Repositorio destino.
+          destination_branch: "main"
