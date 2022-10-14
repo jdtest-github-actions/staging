@@ -6,7 +6,6 @@ jobs:
     if: ${{ startsWith(github.event.pull_request.title, 'all') }}
     runs-on: ubuntu-latest
     steps:
-      run: echo PR closed => ${{ github.event.pull_request.title }}
       - name: git-sync
         uses: wei/git-sync@v3
         with:
